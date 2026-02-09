@@ -1,6 +1,6 @@
-var number1 = +prompt("Enter the first number:");
-var operator = prompt("Choose an action (+, -, *, /):");
-var number2 = +prompt("Enter the second number:");
+var number1 = +prompt("Enter the first number:").trim();
+var operator = prompt("Choose an action (+, -, *, /").trim();
+var number2 = +prompt("Enter the second number:").trim();
 
 var result;
 
