@@ -1,25 +1,32 @@
 var number1 = +prompt("Enter the first number:").trim();
-var operator = prompt("Choose an action (+, -, *, /").trim();
+var operator = prompt("Choose an action (+, -, *, /)").trim();
 var number2 = +prompt("Enter the second number:").trim();
 
 var result;
-
-if (operator === "+") {
-  result = number1 + number2;
-} else if (operator === "-") {
-  result = number1 - number2;
-} else if (operator === "*") {
-  result = number1 * number2;
-} else if (operator === "/") {
+switch (operator) {
+  case "+":
+    result = number1 + number2;
+    alert(result);
+    break;
+  case "-":
+    result = number1 - number2;
+    alert(result);
+    break;
+    case "*":
+    result = number1 * number2;
+    alert(result);
+    break;
+    case "/":
   if (number2 === 0) {
-    console.log("It is not possible to divide by 0!");
+    alert("It is not possible to divide by 0!");
   } else {
     result = number1 / number2;
+    alert(result);
   }
-} else {
-  console.log("Incorrect action was taken!");
+  break;
+  default: 
+  alert("This is not true!")
 }
 
-if (result !== undefined) {
-  console.log("Result: " + result);
-}
+
+
